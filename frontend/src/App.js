@@ -2,126 +2,131 @@ import './App.css';
 import data from './data.js';
 function App() {
   return (
-    <div className="grid-container">
-    <header className="header">
-      <div className="brand">
-        <button onclick="openMenu()">
-          &#9776;
-        </button>
-        <a href="index.html">amazona</a>
+  <div className="grid-container">
+    <header className="row">
+      <div>
+        <a className="brand" href="index.html">amazona</a>
       </div>
-      <div className="header-links">
+      <div>
         <a href="cart.html">Cart</a>
         <a href="signin.html">Sign In</a>
       </div>
     </header>
-    <aside className="sidebar">
-      <h3>Shopping Categories</h3>
-      <button className="sidebar-close-button" onclick="closeMenu()">x</button>
-      <ul>
-        <li>
-          <a href="index.html">Pants</a>
-        </li>
-
-        <li>
-          <a href="index.html">Shirts</a>
-        </li>
-
-      </ul>
-    </aside>
-    <main className="main">
-      <div className="content">
-        <ul className="products">
-          {
-            data.products.map((product) => 
-              (
-                <li key={product._id}>
-                  <div className="product">
-                    <img className="product-image" src={product.image} alt="product" />
-                    <div className="product-name">
-                      <a href={`product/${product._id}`}>{product.name}</a>
-                    </div>
-                    <div className="product-brand">{product.brand}</div>
-                    <div className="product-price">{product.price}</div>
-                    <div className="product-rating">{`${product.rating} Stars (${product.numReviews} Reviews)`}</div>
-                  </div>
-                </li>
-                ))
-              // console.log(product);
-              }
-          {/* <li>
-            <div className="product">
-              <img className="product-image" src="images/d1.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Slim Shirt</a>
+    <main>
+      <div>
+        <div className="row center">
+          <div className="card">
+            <a href="product.html">
+              <img className="medium" src="./images/p1.jpg" alt="product" />
+            </a>
+            <div className="card-body">
+              <a href="product.html">
+                <h2>Nike Slim Shirts</h2>
+              </a>
+              <div className="rating">
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
               </div>
-              <div className="product-brand">Nike</div>
-              <div className="product-price">$60</div>
-              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+              <div className="price">$120</div>
             </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="images/d1.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Slim Shirt</a>
+          </div>
+          <div className="card">
+            <a href="product.html">
+              <img className="medium" src="./images/p1.jpg" alt="product" />
+            </a>
+            <div className="card-body">
+              <a href="product.html">
+                <h2>Nike Slim Shirts</h2>
+              </a>
+              <div className="rating">
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
               </div>
-              <div className="product-brand">Nike</div>
-              <div className="product-price">$60</div>
-              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+              <div className="price">$120</div>
             </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="images/d1.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Slim Shirt</a>
+          </div>
+          <div className="card">
+            <a href="product.html">
+              <img className="medium" src="./images/p1.jpg" alt="product" />
+            </a>
+            <div className="card-body">
+              <a href="product.html">
+                <h2>Nike Slim Shirts</h2>
+              </a>
+              <div className="rating">
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
               </div>
-              <div className="product-brand">Nike</div>
-              <div className="product-price">$60</div>
-              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+              <div className="price">$120</div>
             </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="images/d1.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Slim Shirt</a>
+          </div>
+          <div className="card">
+            <a href="product.html">
+              <img className="medium" src="./images/p1.jpg" alt="product" />
+            </a>
+            <div className="card-body">
+              <a href="product.html">
+                <h2>Nike Slim Shirts</h2>
+              </a>
+              <div className="rating">
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
               </div>
-              <div className="product-brand">Nike</div>
-              <div className="product-price">$60</div>
-              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+              <div className="price">$120</div>
             </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="images/d1.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Slim Shirt</a>
+          </div>
+          <div className="card">
+            <a href="product.html">
+              <img className="medium" src="./images/p1.jpg" alt="product" />
+            </a>
+            <div className="card-body">
+              <a href="product.html">
+                <h2>Nike Slim Shirts</h2>
+              </a>
+              <div className="rating">
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
               </div>
-              <div className="product-brand">Nike</div>
-              <div className="product-price">$60</div>
-              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+              <div className="price">$120</div>
             </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="images/d1.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Slim Shirt</a>
+          </div>
+          <div className="card">
+            <a href="product.html">
+              <img className="medium" src="./images/p1.jpg" alt="product" />
+            </a>
+            <div className="card-body">
+              <a href="product.html">
+                <h2>Nike Slim Shirts</h2>
+              </a>
+              <div className="rating">
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star"></i> </span>
+                <span> <i className="fa fa-star-half-o"></i> </span>
               </div>
-              <div className="product-brand">Nike</div>
-              <div className="product-price">$60</div>
-              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+              <div className="price">$120</div>
             </div>
-          </li> */}
-        </ul>
+          </div>
+        </div>
       </div>
-
     </main>
-    <footer className="footer">
-      All right reserved.
-    </footer>
+    <footer className="row center">All right reserved</footer>
   </div>
   );
 }
