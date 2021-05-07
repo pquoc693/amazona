@@ -5,15 +5,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { detailsProduct } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import { useState } from 'react';
 export default function ProductScreen(props) {
     const productId = props.match.params.id;
     const productDetails = useSelector((state) => state.productDetails);
+    const [qty, setQty] = useState(1);
     const { product, error, loading } = productDetails;
     console.log(product);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(detailsProduct(productId));
     }, [dispatch, productId]);
+    const addToCartHandler = () => {
+        props.history.push(`/cart/${productId}?qty=${qty}`);
+    }
     return (
         <>
             {loading ? <LoadingBox /> : error ? <MessageBox variant="danger">{error}</MessageBox> :
@@ -89,8 +94,8 @@ export default function ProductScreen(props) {
                                                     <div>Qty</div>
                                                     <div>
                                                         <select
-                                                        //   value={qty}
-                                                        //   onChange={(e) => setQty(e.target.value)}
+                                                            value={qty}
+                                                            onChange={(e) => setQty(e.target.value)}
                                                         >
                                                             {[...Array(product.countInStock).keys()].map(
                                                                 (x) => (
@@ -105,11 +110,10 @@ export default function ProductScreen(props) {
                                             </li>
                                             <li>
                                                 <button
-                                                    //   onClick={addToCartHandler}
-                                                    className="primary block"
-                                                >
+                                                    onClick={addToCartHandler}
+                                                    className="primary block">
                                                     Add to Cart
-                        </button>
+                                                </button>
                                             </li>
                                         </>
                                     )}
