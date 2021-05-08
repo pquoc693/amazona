@@ -5,7 +5,10 @@
   "description": "��#\u0000 \u0000a\u0000m\u0000a\u0000z\u0000o\u0000n\u0000a\u0000\r\u0000 \u0000",
   "main": "index.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.12.7",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
