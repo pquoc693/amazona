@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
+import orderRouter from './routers/orderRouter.js';
 
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
     useNewUrlParser: true,
