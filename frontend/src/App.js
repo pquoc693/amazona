@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SignInCreen';
+import RegisterScreen from './screens/RegisterScreen';
 function App() {
     const cart = useSelector((state) => state.cart);
     const { cartItems } = cart;
@@ -60,6 +61,7 @@ function App() {
                     <Route path="/product/:id" component={ProductScreen}></Route>
                     <Route path="/signin" component={SigninScreen}></Route>
                     <Route path="/" component={HomeScreen} exact></Route>
+                    <Route path="/register" component={RegisterScreen}></Route>
                 </main>
                 <footer className="row center">All right reserved</footer>
             </div>
