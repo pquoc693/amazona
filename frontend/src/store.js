@@ -3,7 +3,8 @@ import thunk from 'redux-thunk';
 import { cartReducer } from './reducers/cartReducers';
 import {
     orderCreateReducer,
-    orderDetailsReducer
+    orderDetailsReducer,
+    orderPayReducer
 } from './reducers/orderReducers';
 import {
     productReducers,
@@ -39,6 +40,7 @@ const reducer = combineReducers({
     paymentMethod: 'PayPal',
     orderCreate: orderCreateReducer,
     orderDetails: orderDetailsReducer,
+    orderPay: orderPayReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

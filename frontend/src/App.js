@@ -26,13 +26,13 @@ function App() {
     const dispatch = useDispatch();
     const signoutHandler = () => {
         dispatch(signout());
-    };
+    }
     return (
         <BrowserRouter>
             <div className="grid-container">
                 <header className="row">
                     <div>
-                        <Link className="brand" to="/"></Link>
+                        <Link className="brand" to="/">AmaZona</Link>
                     </div>
                     <div>
                         <Link to="/cart">
