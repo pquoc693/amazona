@@ -129,7 +129,7 @@ export default function PlaceOrderScreen(props) {
                                     disabled={cart.cartItems.length === 0}
                                 >
                                     Place Order
-                                </button>
+                </button>
                             </li>
                             {loading && <LoadingBox></LoadingBox>}
                             {error && <MessageBox variant="danger">{error}</MessageBox>}
